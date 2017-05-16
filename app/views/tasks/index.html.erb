@@ -1,0 +1,16 @@
+<h1>My to-do list</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      [<%= task.done ? "x" : " " %>] <%= task.description %>
+    </li>
+    <%= link_to "Accéder à la tâche", task_path(task) %>
+    <%= link_to "Modifier la tâche", edit_task_path(task) %>
+    <%= link_to "Supprimer la tâche", task_path(task), method: :delete %>
+  <% end %>
+</ul>
+
+<%= link_to "Créer une nouvelle tâche", new_task_path %>
+
+

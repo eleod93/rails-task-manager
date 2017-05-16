@@ -1,0 +1,12 @@
+<!-- <label for="description">Description: </label>
+<input type="text" name="task[description]" id="description"
+       value="Faire la vaisselle"> -->
+
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :done %>
+  <%= f.text_field :done %>
+  <%= f.submit %>
+<% end %>
